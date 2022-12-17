@@ -39,46 +39,50 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <article className="flex flex-col items-center">
-      <section className="py-16 max-w-md ">
-        <div>
-          <h1 className="text-white text-4xl font-mono leading-9">
-            {post.title}
-          </h1>
-          <div className="flex justify-between">
-            <div className="flex ">
-              <Image
-                className="rounded-full"
-                src={urlFor(post.author.image).url()}
-                alt={post.author.name}
-                width={40}
-                height={40}
-              />
-              <p className="text-white"> {post.author.name}</p>
-            </div>
-            <p className="text-white">
-              {new Date(post._createdAt).toLocaleDateString("en-US", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
-            </p>
-          </div>
+    <article className="grid grid-cols-2 gap-4">
+      <div>
+        <div className="max-w-md py-16 ">
           <div>
-            <Image
-              className="object-cover object-center mx-auto"
-              src={urlFor(post.mainImage).url()}
-              alt={post.author.name}
-              width={360}
-              height={200}
-            />
+            <h1 className="font-mono text-4xl leading-9 text-white">
+              {post.title}
+            </h1>
+            <div className="flex justify-between">
+              <div className="flex">
+                <Image
+                  className="rounded-full"
+                  src={urlFor(post.author.image).url()}
+                  alt={post.author.name}
+                  width={40}
+                  height={40}
+                />
+                <p className="text-white"> {post.author.name}</p>
+              </div>
+              <p className="text-white">
+                {new Date(post._createdAt).toLocaleDateString("en-US", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </p>
+            </div>
+            <div>
+              <Image
+                className="object-cover object-center mx-auto"
+                src={urlFor(post.mainImage).url()}
+                alt={post.author.name}
+                width={360}
+                height={200}
+              />
+            </div>
+            <p className="text-white">{post.description}</p>
+            <div>{/* TODO: CATEGORIES */}</div>
           </div>
-          <p className="text-white">{post.description}</p>
-          <div>{/* TODO: CATEGORIES */}</div>
         </div>
-      </section>
-
-      <PortableText value={post.body} components={RichTextComponents} />
+        <PortableText value={post.body} components={RichTextComponents} />
+      </div>
+      <div>
+        <h1 className="text-white">Sidebar</h1>
+      </div>
     </article>
   );
 }

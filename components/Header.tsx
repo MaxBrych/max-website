@@ -3,7 +3,12 @@ import Link from "next/link";
 function Header() {
   return (
     <nav className="flex items-center justify-between h-16 text-white bg-gray-900 border-b-2 border-gray-800 ">
-      <h1 className="text-gray-200">Max Brych</h1>
+      <Link
+        href="/"
+        className="px-3 py-1 text-gray-200 rounded-full hover:bg-gray-800"
+      >
+        Max Brych
+      </Link>
       <ul className="flex items-center">
         <li>
           <Link
@@ -15,7 +20,7 @@ function Header() {
         </li>
         <li>
           <Link
-            href="/"
+            href="/about"
             className="px-3 py-1 text-gray-200 rounded-full hover:bg-gray-800"
           >
             About
@@ -23,7 +28,7 @@ function Header() {
         </li>
         <li>
           <Link
-            href="/"
+            href="./blog"
             className="px-3 py-1 text-gray-200 rounded-full hover:bg-gray-700"
           >
             Blog
