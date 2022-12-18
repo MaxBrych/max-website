@@ -2,6 +2,7 @@ import Link from "./Link.jsx";
 import React from "react";
 
 import { FiFigma } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 
 const Linklist = () => {
   const data = [
@@ -9,18 +10,20 @@ const Linklist = () => {
       title: "Figma",
       icon: <FiFigma />,
       link: "https://www.figma.com/@maxbrych",
+      id: 1,
     },
     {
-      title: "Ligma",
-      icon: <FiFigma />,
-      link: "https://www.figma.com/@maxbrych",
+      title: "Github",
+      icon: <AiFillGithub />,
+      link: "https://github.com/MaxBrych",
+      id: 2,
     },
   ];
 
   return (
     <div className="space-y-4">
       {data.map((obj) => (
-        <Link title={obj.title} icon={obj.icon} link={obj.link} />
+        <Link key={obj.id} title={obj.title} icon={obj.icon} link={obj.link} />
       ))}
     </div>
   );

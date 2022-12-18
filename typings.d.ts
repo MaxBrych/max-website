@@ -13,10 +13,12 @@ interface Post extends Base {
   mainImage: Image;
   slug: Slug;
   title: string;
+  intro: string;
   description: string;
 }
 
 interface Author extends Base {
+  intro: ReactNode;
   bio: Block[];
   image: Image;
   name: string;
