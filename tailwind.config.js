@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     colors: {
@@ -21,7 +22,11 @@ module.exports = {
         200: "#8AB4F8",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Space Grotesk", "sans-serif"],
+      },
+    },
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };

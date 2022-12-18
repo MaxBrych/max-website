@@ -4,6 +4,8 @@ import Image from "next/image";
 import urlFor from "../../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
+import Link from "next/link";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 type Props = {
   params: {
@@ -39,15 +41,15 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <article className="grid grid-cols-2 gap-4">
-      <div>
-        <div className="max-w-md py-16 ">
+    <div className="flex flex-col items-center w-full">
+      <div className="py-16 sm:w-2/3">
+        <div className="px-6 ">
           <div>
-            <h1 className="font-mono text-4xl leading-9 text-white">
+            <h1 className="font-mono text-5xl tracking-tighter leading-12">
               {post.title}
             </h1>
-            <div className="flex justify-between">
-              <div className="flex">
+            <div className="flex justify-between py-6 sm:py-8 ">
+              <div className="flex flex-row align-top">
                 <Image
                   className="rounded-full"
                   src={urlFor(post.author.image).url()}
@@ -55,7 +57,10 @@ async function Post({ params: { slug } }: Props) {
                   width={40}
                   height={40}
                 />
-                <p className="text-white"> {post.author.name}</p>
+                <p className="px-2 font-semibold text-white text-m">
+                  {" "}
+                  {post.author.name}
+                </p>
               </div>
               <p className="text-white">
                 {new Date(post._createdAt).toLocaleDateString("en-US", {
@@ -70,20 +75,27 @@ async function Post({ params: { slug } }: Props) {
                 className="object-cover object-center mx-auto"
                 src={urlFor(post.mainImage).url()}
                 alt={post.author.name}
-                width={360}
-                height={200}
+                width={560}
+                height={160}
               />
             </div>
-            <p className="text-white">{post.description}</p>
+            <p className="py-6 text-lg sm:text-2xl">{post.description}</p>
             <div>{/* TODO: CATEGORIES */}</div>
           </div>
+          <div className="py-6 text-lg sm:text-2xl">
+            <PortableText value={post.body} components={RichTextComponents} />
+          </div>
         </div>
-        <PortableText value={post.body} components={RichTextComponents} />
+        <div className="absolute right-6 top-24">
+          <h1 className="text-white">Sidebar</h1>
+        </div>
+        <div className="absolute left-4 top-20 sm:left-6 sm:top-24">
+          <Link href="/blog">
+            <MdArrowBackIosNew className="w-12 h-12 p-3 bg-gray-800 border border-gray-300 rounded-full hover:bg-gray-700" />
+          </Link>
+        </div>
       </div>
-      <div>
-        <h1 className="text-white">Sidebar</h1>
-      </div>
-    </article>
+    </div>
   );
 }
 

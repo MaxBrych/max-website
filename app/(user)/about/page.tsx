@@ -5,23 +5,24 @@ interface About {
   props: any;
 }
 
-function About({ props }: any) {
+function About(props: any) {
   return (
     <div>
       <main className="flex justify-center px-4 bg-gray-900 align-center">
-        <section className="flex-col max-w-xl min-h-screen font-mono align-center">
+        <section className="flex-col max-w-xl min-h-screen align-center">
           <div className="flex items-baseline justify-between my-4">
-            {/* Image */}
+            {/* IMAGE */}
+            <div></div>
             <a
               href=""
-              className="flex items-center px-3 py-2 font-semibold text-black transition ease-in-out rounded-full hover:opacity-100 h-9 bg-gradient-to-r from-white to-primary-200 hover:bg-gradient-r hover:from-primary-200 hover:to-primary-200"
+              className="flex items-center px-3 py-2 font-semibold text-black transition ease-in-out rounded-full text-m hover:opacity-100 h-9 bg-gradient-to-r from-white to-primary-200 hover:bg-gradient-r hover:from-primary-200 hover:to-primary-200"
             >
               folgen
             </a>
           </div>
 
           <h1 className="text-3xl font-semibold leading-8 text-gray-200">
-            maxbrych.eth
+            maxbrych
           </h1>
           <h6 className="mb-2 text-base font-semibold text-gray-200">
             Web3 Enthusiast Technologe und Erkunder Virtueller Welten

@@ -6,7 +6,7 @@ export const RichTextComponents = {
   types: {
     image: ({ value }: any) => {
       return (
-        <div className="realtive w-full h-96 m-10 mx-auto">
+        <div className="w-full m-10 mx-auto realtive h-96">
           <Image
             className="object-contain"
             src={urlFor(value).url()}
@@ -20,28 +20,41 @@ export const RichTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => (
-      <ul className="text-white ml-10 py-5 list-disc space-y-5">{children}</ul>
+      <ul className="py-4 ml-10 space-y-5 text-white list-disc">{children}</ul>
     ),
     number: ({ children }: any) => (
-      <ol className=" text-white mt-lg list-decimal">{children}</ol>
+      <ol className="text-white list-decimal mt-lg">{children}</ol>
     ),
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 className="text-white text-5xl py-10 font-semibold">{children}</h1>
+      <h1 className="py-6 text-4xl font-semibold text-white sm:py-10">
+        {children}
+      </h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="text-white text-4xl py-10 font-semibold">{children}</h2>
+      <h2 className="py-6 text-4xl font-semibold text-white sm:py-10">
+        {children}
+      </h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="text-white text-3xl py-10 font-semibold">{children}</h3>
+      <h3 className="py-6 text-3xl font-semibold text-white sm:py-10">
+        {children}
+      </h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="text-white text-2xl py-10 font-semibold">{children}</h4>
+      <h4 className="py-4 text-2xl font-semibold text-white sm:py-6">
+        {children}
+      </h4>
+    ),
+    p: ({ children }: any) => (
+      <p className="py-6 text-xl font-semibold text-white sm:py-10">
+        {children}
+      </p>
     ),
 
     blockquote: ({ children }: any) => (
-      <blockquote className="border-l-white text-white border-l-4 pl-5 py-5 my-5">
+      <blockquote className="py-4 pl-4 my-5 text-white border-l-4 sm:py-5 border-l-white">
         {children}
       </blockquote>
     ),
@@ -56,7 +69,7 @@ export const RichTextComponents = {
         <Link
           href={value.href}
           rel={rel}
-          className=" text-white underline decoration-white hover:decoration-gray"
+          className="text-white underline decoration-white hover:decoration-gray"
         >
           {children}
         </Link>

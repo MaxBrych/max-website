@@ -5,7 +5,7 @@ function Header() {
     <nav className="flex items-center justify-between h-16 text-white bg-gray-900 border-b-2 border-gray-800 ">
       <Link
         href="/"
-        className="px-3 py-1 text-gray-200 rounded-full hover:bg-gray-800"
+        className="px-3 py-1 font-sans text-gray-200 rounded-full hover:bg-gray-800"
       >
         Max Brych
       </Link>
