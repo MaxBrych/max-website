@@ -14,8 +14,8 @@ function BlogList({ posts }: Props) {
   }
 
   return (
-    <div className="py-18">
-      <div className="grid grid-cols-1 gap-10 px-4 pb-16 md:grid-cols-2 md:px-16 gap-y-16">
+    <div className="">
+      <div className="grid grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 md:px-16 gap-y-16">
         {/* Posts */}
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
@@ -24,10 +24,10 @@ function BlogList({ posts }: Props) {
                 <Image
                   className="object-cover object-left rounded-2xl"
                   src={urlFor(post.mainImage).url()}
-                  alt={""}
+                  alt={post.title}
                   fill
                 />
-                <div className="absolute bottom-0 flex justify-between w-full p-5 text-white bg-black bg-opacity-20 rounded-b-2xl">
+                <div className="invisible absolute bottom-0 flex justify-between w-full p-5 text-white bg-black bg-opacity-20 rounded-b-2xl">
                   <div>
                     <p className="text-lg font-bold">{post.title}</p>
                     <p>
@@ -41,7 +41,9 @@ function BlogList({ posts }: Props) {
                 </div>
               </div>
               <div className="flex-1 mt-4 text-white">
-                <p>{post.title}</p>
+                <h1 className="text-xl font-semibold leading-5 mb-1">
+                  {post.title}
+                </h1>
                 <p className="line-clamp-3">{post.description}</p>
               </div>
             </div>

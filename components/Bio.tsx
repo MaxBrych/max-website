@@ -19,7 +19,7 @@ function Bio({ author }: Props) {
           className="flex justify-center px-4 bg-gray-900 align-center "
         >
           <section className="flex-col w-full  md:w-1/2 min-h-screen align-center">
-            <div className="flex items-baseline justify-between py-18">
+            <div className="flex items-baseline justify-between py-12">
               {/* IMAGE */}
               <Image
                 className="rounded-full"
