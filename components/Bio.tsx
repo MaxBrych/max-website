@@ -30,9 +30,9 @@ function Bio({ author }: Props) {
               />
               <a
                 href="https://twitter.com/MaxBrych"
-                className="flex items-center px-3 py-2 font-semibold text-black transition ease-in-out rounded-full text-m hover:opacity-100 h-9 bg-gradient-to-r from-white to-primary-200 hover:bg-gradient-r hover:from-primary-200 hover:to-primary-200"
+                className="flex items-center px-3 py-2 font-bold text-black transition ease-in-out rounded-full text-m hover:opacity-100 h-9 bg-gradient-to-r from-white to-primary-200 hover:bg-gradient-r hover:from-primary-200 hover:to-primary-200"
               >
-                folgen
+                Folgen
               </a>
             </div>
 

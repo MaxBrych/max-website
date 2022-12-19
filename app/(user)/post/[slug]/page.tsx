@@ -42,10 +42,10 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="py-16 sm:w-2/3">
+      <div className="py-8 md:py-16 sm:w-2/3">
         <div className="px-6 ">
           <div>
-            <h1 className="font-mono text-5xl tracking-tighter leading-12">
+            <h1 className="font-mono font-semibold text-4xl md:text-5xl tracking-tighter leading-16">
               {post.title}
             </h1>
             <div className="flex justify-between py-6 sm:py-8 ">
@@ -87,9 +87,9 @@ async function Post({ params: { slug } }: Props) {
           </div>
         </div>
         <div className="absolute right-6 top-24">
-          <h1 className="text-white">Sidebar</h1>
+          <h1 className="text-white invisible md:visible">Sidebar</h1>
         </div>
-        <div className="absolute left-4 top-20 sm:left-6 sm:top-24">
+        <div className="absolute left-4 top-20 sm:left-6 sm:top-24 invisible md:visible">
           <Link href="/blog">
             <MdArrowBackIosNew className="w-12 h-12 p-3 bg-gray-800 border border-gray-300 rounded-full hover:bg-gray-700" />
           </Link>
