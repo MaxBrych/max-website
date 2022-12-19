@@ -14,9 +14,7 @@ function BlogList({ posts }: Props) {
   }
 
   return (
-    <div>
-      <hr className="mb-10 " />
-
+    <div className="py-18">
       <div className="grid grid-cols-1 gap-10 px-4 pb-16 md:grid-cols-2 md:px-16 gap-y-16">
         {/* Posts */}
         {posts.map((post) => (

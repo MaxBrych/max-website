@@ -42,7 +42,7 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="py-8 md:py-16 sm:w-2/3">
+      <div className="py-8 md:py-18 sm:w-2/3">
         <div className="px-6 ">
           <div>
             <h1 className="font-mono font-semibold text-4xl md:text-5xl tracking-tighter leading-16">
