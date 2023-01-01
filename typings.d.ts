@@ -16,6 +16,17 @@ interface Post extends Base {
   intro: string;
   description: string;
 }
+interface Project extends Base {
+  author: Author;
+  body: Block[];
+  categories: Category[];
+  mainImage: Image;
+  slug: Slug;
+  title: string;
+  intro: string;
+  description: string;
+  link: string;
+}
 
 interface Author extends Base {
   intro: ReactNode;

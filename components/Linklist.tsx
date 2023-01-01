@@ -21,7 +21,7 @@ const Linklist = () => {
   ];
 
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4">
       {data.map((obj) => (
         <Link key={obj.id} title={obj.title} icon={obj.icon} link={obj.link} />
       ))}

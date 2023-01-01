@@ -7,7 +7,7 @@ import BlogList from "../../../components/BlogList";
 import PreviewSuspense from "../../../components/PreviewSuspense";
 
 const query = groq`
-*[_type=='post']{
+*[_type=='project']{
   ...,
   author->,
   categories[]->
@@ -16,7 +16,7 @@ const query = groq`
 
 export const revalidate = 30; //revalidate content on this page every 39 seconds
 
-export default async function Blog() {
+export default async function Project() {
   if (previewData()) {
     return (
       <PreviewSuspense

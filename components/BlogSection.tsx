@@ -1,28 +1,26 @@
-import post from "../schemas/post";
-import Image from "next/image";
-import urlFor from "../lib/urlFor";
-import category from "../schemas/category";
+import { previewData } from "next/headers";
+import { groq } from "next-sanity";
+import { client } from "../lib/sanity.client";
 import ClientSideRoute from "./ClientSideRoute";
+import urlFor from "../lib/urlFor";
+import Image from "next/image";
 
 type Props = {
   posts: Post[];
 };
 
-function BlogList({ posts }: Props) {
-  {
-    /*console.log(posts.length);*/
-  }
-
+export default function BlogSection({ posts }: Props) {
   return (
-    <div className="">
-      <div className="grid grid-cols-1 gap-10 px-4 py-16 md:grid-cols-3 md:px-16 gap-y-16">
+    <div className="py-6 md:px-16 md:py-14">
+      <h1 className="mb-4 text-3xl font-semibold">Blog Posts</h1>
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-3 gap-y-16">
         {/* Posts */}
-        {posts.map((post) => (
+        {posts.map((post: any) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
             <div className="flex flex-col cursor-pointer group">
-              <div className="relative w-full h-56">
+              <div className="relative w-full h-56 border border-gray-800 rounded-xl">
                 <Image
-                  className="object-cover object-left rounded-2xl"
+                  className="object-cover object-left rounded-xl"
                   src={urlFor(post.mainImage).url()}
                   alt={post.title}
                   fill
@@ -53,5 +51,3 @@ function BlogList({ posts }: Props) {
     </div>
   );
 }
-
-export default BlogList;

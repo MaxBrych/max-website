@@ -8,6 +8,6 @@ module.exports = {
     appDir: true,
   },
   images: {
-    domains: ["cdn.sanity.io"],
+    domains: ["cdn.sanity.io", "cdn.shopify.com"],
   },
 };
