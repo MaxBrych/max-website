@@ -79,7 +79,7 @@ async function Post({ params: { slug } }: Props) {
                 height={160}
               />
             </div>
-            <p className="py-6 text-lg sm:text-2xl">{post.description}</p>
+            <p className="py-6 text-lg sm:text-xl">{post.description}</p>
             <div>{/* TODO: CATEGORIES */}</div>
           </div>
           <div className="py-6 text-lg sm:text-lg">
