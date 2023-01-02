@@ -1,6 +1,6 @@
 import Link from "./Link.jsx";
-import React from "react";
 
+import { BsLinkedin } from "react-icons/bs";
 import { FiFigma } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 
@@ -15,6 +15,12 @@ const Linklist = () => {
     {
       title: "Github",
       icon: <AiFillGithub />,
+      link: "https://github.com/MaxBrych",
+      id: 2,
+    },
+    {
+      title: "Linkedin",
+      icon: <BsLinkedin />,
       link: "https://github.com/MaxBrych",
       id: 2,
     },

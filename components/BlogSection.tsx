@@ -12,7 +12,15 @@ type Props = {
 export default function BlogSection({ posts }: Props) {
   return (
     <div className="py-6 md:px-16 md:py-14">
-      <h1 className="mb-4 text-3xl font-semibold">Blog Posts</h1>
+      <div className="flex justify-between">
+        <h1 className="mb-4 text-3xl font-semibold">Blog Posts</h1>
+        <a
+          href="/blog"
+          className="py-2 px-4 bg-white text-black rounded-full hover:bg-gray-200"
+        >
+          Mehr sehen
+        </a>
+      </div>
       <div className="grid grid-cols-1 gap-10 md:grid-cols-3 gap-y-16">
         {/* Posts */}
         {posts.map((post: any) => (
@@ -25,7 +33,7 @@ export default function BlogSection({ posts }: Props) {
                   alt={post.title}
                   fill
                 />
-                <div className="absolute bottom-0 flex justify-between invisible w-full p-5 text-white bg-black bg-opacity-20 rounded-b-2xl">
+                <div className="absolute bottom-0 flex justify-between invisible w-full p-5  bg-opacity-20 rounded-b-2xl">
                   <div>
                     <p className="text-lg font-bold">{post.title}</p>
                     <p>
@@ -38,7 +46,7 @@ export default function BlogSection({ posts }: Props) {
                   </div>
                 </div>
               </div>
-              <div className="flex-1 mt-4 text-white">
+              <div className="flex-1 mt-4 ">
                 <h1 className="mb-1 text-xl font-semibold leading-5">
                   {post.title}
                 </h1>

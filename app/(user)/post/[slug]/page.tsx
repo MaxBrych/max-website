@@ -54,7 +54,8 @@ async function Post({ params: { slug } }: Props) {
                   className="rounded-full"
                   src={urlFor(post.author.image).url()}
                   alt={post.author.name}
-                  fill
+                  width={56}
+                  height={56}
                 />
                 <p className="px-2 font-semibold text-white text-m">
                   {" "}

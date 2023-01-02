@@ -47,7 +47,7 @@ export default async function HomePage() {
   const author = await client.fetch(query3);
   return (
     <div>
-      <main className="flex-col items-center justify-center w-full min-h-screen px-4 py-24 font-sans align-middle ">
+      <main className="flex-col items-center justify-center w-full  min-h-screen px-4 py-24 font-sans align-middle ">
         <HeroSection />
         <ProjectSection projects={projects} />
         <BlogSection posts={posts} />
