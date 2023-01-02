@@ -26,7 +26,7 @@ export default function ProjectSection({ projects }: Props) {
         {projects.map((project: any) => (
           <ClientSideRoute key={project._id} route={project.link}>
             <div className="flex flex-col cursor-pointer group">
-              <div className="relative w-full border border-gray-800 h-80 rounded-xl">
+              <div className="relative w-full border border-gray-800 h-56 md:h-80 rounded-xl">
                 <Image
                   className="object-cover object-left rounded-xl"
                   src={urlFor(project.mainImage).url()}

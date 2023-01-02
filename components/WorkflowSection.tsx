@@ -1,7 +1,7 @@
 import React from "react";
 import { BiCodeAlt, BiPen, BiVolume } from "react-icons/bi";
 
-const icon = { color: "white", size: "36" };
+const icon = { color: "black", size: "36" };
 
 export const WorkflowSection = () => {
   const data = [
@@ -35,12 +35,12 @@ export const WorkflowSection = () => {
             {obj.icon}
             <h1 className="text-2xl font-medium">{obj.title}</h1>
             <p className="text-lg text-gray-300">{obj.descr}</p>
-            <a
+            {/*  <a
               href={obj.link}
-              className="px-6 py-2 mt-4 text-base font-semibold bg-gray-800 rounded-full"
+              className="px-6 py-2 mt-4 text-base font-semibold  rounded-full"
             >
               Erfahre Mehr
-            </a>
+            </a>*/}
           </div>
         ))}
       </section>

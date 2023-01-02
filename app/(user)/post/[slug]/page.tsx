@@ -41,7 +41,7 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <div className="flex flex-col items-center w-full p-8 sm:py-14">
+    <div className="flex flex-col items-center w-full md:p-8 sm:py-14">
       <div className=" md:py-18 sm:w-2/3">
         <div className="px-4 ">
           <div>
@@ -49,7 +49,7 @@ async function Post({ params: { slug } }: Props) {
               {post.title}
             </h1>
             <div className="flex justify-between py-6 sm:py-8 ">
-              <div className="flex flex-row w-full h-56 align-top">
+              <div className="flex flex-row w-full align-top">
                 <Image
                   className="rounded-full"
                   src={urlFor(post.author.image).url()}
