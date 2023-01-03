@@ -27,7 +27,7 @@ export const WorkflowSection = () => {
   ];
   return (
     <div className="py-6 md:px-16 md:py-14">
-      <section className="md:grid md:grid-cols-3 ">
+      <section className="md:grid md:grid-cols-3 md:pr-4">
         {data.map((obj) => (
           <div className="flex flex-col items-start justify-start mb-4 ">
             {obj.icon}
