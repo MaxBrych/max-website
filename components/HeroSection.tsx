@@ -10,7 +10,7 @@ export const HeroSection = () => {
           Design. Build. Publish.
         </h1>
         <p className="text-xl text-gray-700 md:text-2xl"></p>
-        <a href="">Erfahre Mehr</a>
+        <a href=""></a>
       </div>
     </div>
   );
