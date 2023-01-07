@@ -41,28 +41,28 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <div className="flex flex-col items-center w-full md:p-8 sm:py-14">
-      <div className="py-20  md:py-18 sm:w-2/3">
+    <div className="flex flex-col items-center w-full font-modern md:p-8 sm:py-14">
+      <div className="py-20 md:py-18 sm:w-2/3">
         <div className="px-4 ">
           <div>
-            <h1 className="font-sans text-4xl font-semibold tracking-tighter md:text-5xl leading-16">
+            <h1 className="text-5xl font-medium tracking-tight md:text-6xl leading-16">
               {post.title}
             </h1>
             <div className="flex justify-between py-6 sm:py-8 ">
-              <div className="flex flex-row w-full align-top">
+              <div className="flex flex-row items-center ">
                 <Image
-                  className="rounded-full"
+                  className="h-12 rounded-full"
                   src={urlFor(post.author.image).url()}
                   alt={post.author.name}
-                  width={56}
-                  height={56}
+                  width={44}
+                  height={44}
                 />
-                <p className="px-2 font-semibold text-white text-m">
+                <p className="items-center px-2 font-semibold text-m">
                   {" "}
                   {post.author.name}
                 </p>
               </div>
-              <p className="text-white">
+              <p className="text-m ">
                 {new Date(post._createdAt).toLocaleDateString("en-US", {
                   day: "numeric",
                   month: "long",
@@ -72,7 +72,7 @@ async function Post({ params: { slug } }: Props) {
             </div>
             <div>
               <Image
-                className="object-cover object-center mx-auto"
+                className="object-cover object-center mx-auto rounded-xl"
                 src={urlFor(post.mainImage).url()}
                 alt={post.author.name}
                 width={560}
@@ -82,7 +82,7 @@ async function Post({ params: { slug } }: Props) {
             <p className="py-6 text-lg sm:text-xl">{post.description}</p>
             <div>{/* TODO: CATEGORIES */}</div>
           </div>
-          <div className="py-6 text-lg sm:text-lg">
+          <div className="py-6 text-lg md:py-8 sm:text-lg">
             <PortableText value={post.body} components={RichTextComponents} />
           </div>
         </div>
@@ -91,7 +91,7 @@ async function Post({ params: { slug } }: Props) {
         </div>
         <div className="absolute invisible left-4 top-20 sm:left-6 sm:top-24 md:visible">
           <Link href="/blog">
-            <MdArrowBackIosNew className="w-12 h-12 p-3 border border-gray-700 rounded-full hover:bg-gray-700" />
+            <MdArrowBackIosNew className="w-12 h-12 p-3 border border-gray-300 rounded-full hover:bg-gray-200" />
           </Link>
         </div>
       </div>

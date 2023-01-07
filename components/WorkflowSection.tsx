@@ -1,7 +1,7 @@
 import React from "react";
 import { BiCodeAlt, BiPen, BiVolume } from "react-icons/bi";
 
-const icon = { color: "black", size: "36" };
+const icon = { color: "black", size: "2rem" };
 
 export const WorkflowSection = () => {
   const data = [
@@ -26,8 +26,8 @@ export const WorkflowSection = () => {
     },
   ];
   return (
-    <div className="py-6 md:px-16 md:py-14">
-      <section className="md:grid md:grid-cols-3 md:pr-4">
+    <div className="py-14 md:px-16 md:py-14">
+      <section className="h-full space-y-8 md:space-x-8 md:grid md:grid-cols-3 md:pr-4">
         {data.map((obj) => (
           <div className="flex flex-col items-start justify-start mb-4 ">
             {obj.icon}

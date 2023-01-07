@@ -25,18 +25,18 @@ function Header() {
     },
   ];
   return (
-    <div className="fixed top-0 z-50 w-full md:static">
-      <nav className="flex items-center justify-between h-16 px-4 text-white bg-black border-b-2 border-gray-800 md:px-16 ">
+    <div className="fixed top-0 left-0 right-0 z-50">
+      <nav className="flex items-center justify-between px-4 text-white bg-black border-b-2 border-gray-800 h-14 md:px-16 ">
         <Link
           href="/"
-          className="px-3 py-1 font-sans  text-gray-200 rounded-full hover:bg-gray-800"
+          className="px-3 py-1 font-sans text-gray-200 rounded-full hover:bg-gray-800"
         >
           Max Brych
         </Link>
         <HiMenuAlt4 style={style} className="invisible" />
         <ul className="flex items-center">
           {links.map((link) => (
-            <li className="px-2 py-2  rounded-full hover:bg-gray-700">
+            <li className="px-2 py-2 rounded-full hover:bg-gray-700">
               <Link href={link.href} key={link.id}>
                 {link.icon}
               </Link>
