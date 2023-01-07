@@ -16,7 +16,7 @@ export default function ProjectSection({ projects }: Props) {
         <h1 className="mb-4 text-3xl font-semibold">Projekte</h1>
         <a
           href="/projects"
-          className="px-4 py-2 text-black bg-white rounded-full h-9 hover:bg-gray-200"
+          className="h-10 px-4 py-2 text-black bg-white rounded-full hover:bg-gray-200"
         >
           Mehr sehen
         </a>

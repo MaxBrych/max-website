@@ -16,7 +16,7 @@ export default function BlogSection({ posts }: Props) {
         <h1 className="mb-4 text-3xl font-semibold">Blog Posts</h1>
         <a
           href="/blog"
-          className="py-2 px-4 bg-white text-black rounded-full hover:bg-gray-200"
+          className="h-10 px-4 py-2 text-black bg-white rounded-full hover:bg-gray-200"
         >
           Mehr sehen
         </a>
@@ -33,7 +33,7 @@ export default function BlogSection({ posts }: Props) {
                   alt={post.title}
                   fill
                 />
-                <div className="absolute bottom-0 flex justify-between invisible w-full p-5  bg-opacity-20 rounded-b-2xl">
+                <div className="absolute bottom-0 flex justify-between invisible w-full p-5 bg-opacity-20 rounded-b-2xl">
                   <div>
                     <p className="text-lg font-bold">{post.title}</p>
                     <p>
