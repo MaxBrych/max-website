@@ -9,9 +9,7 @@ export const HeroSection = () => {
         <h1 className="py-4 text-6xl font-medium tracking-tighter md:text-7xl">
           Design. Build. Publish.
         </h1>
-        <p className="text-xl text-gray-700 md:text-2xl">
-          Hier steht ein kurzer einleite text
-        </p>
+        <p className="text-xl text-gray-700 md:text-2xl"></p>
         <a href="">Erfahre Mehr</a>
       </div>
     </div>
