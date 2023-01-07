@@ -13,10 +13,10 @@ export default function ProjectSection({ projects }: Props) {
   return (
     <div className="py-6 md:px-16 md:py-14">
       <div className="flex justify-between">
-        <h1 className="mb-4 text-3xl font-semibold">Blog Posts</h1>
+        <h1 className="mb-4 text-3xl font-semibold">Projekte</h1>
         <a
           href="/projects"
-          className="py-2 px-4 bg-white text-black rounded-full hover:bg-gray-200"
+          className="px-4 py-2 text-black bg-white rounded-full h-9 hover:bg-gray-200"
         >
           Mehr sehen
         </a>
@@ -26,14 +26,14 @@ export default function ProjectSection({ projects }: Props) {
         {projects.map((project: any) => (
           <ClientSideRoute key={project._id} route={project.link}>
             <div className="flex flex-col cursor-pointer group">
-              <div className="relative w-full border border-gray-800 h-56 md:h-80 rounded-xl">
+              <div className="relative w-full h-56 border border-gray-800 md:h-80 rounded-xl">
                 <Image
                   className="object-cover object-left rounded-xl"
                   src={urlFor(project.mainImage).url()}
                   alt={project.title}
                   fill
                 />
-                <div className="absolute bottom-0 flex justify-between invisible w-full p-5  bg-opacity-20 rounded-b-2xl">
+                <div className="absolute bottom-0 flex justify-between invisible w-full p-5 bg-opacity-20 rounded-b-2xl">
                   <div>
                     <p className="text-lg font-bold">{project.title}</p>
                     <p>

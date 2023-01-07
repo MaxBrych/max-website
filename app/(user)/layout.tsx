@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="font-sans text-black bg-white">
+      <body className="text-black bg-white font-modern">
         <Header />
 
         {children}

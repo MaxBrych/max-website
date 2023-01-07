@@ -1,5 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: TT Firs Neue;
+    font-weight: 400;
+    src: url(../public/font/TTFirsNeue-Regular.woff) format("woff");
+  }
+  @font-face {
+    font-family: TT Firs Neue;
+    font-weight: 500;
+    src: url(../public/font/TTFirsNeue-Medium.woff) format("woff");
+  }
+  @font-face {
+    font-family: TT Firs Neue;
+    font-weight: 600;
+    src: url(../public/font/TTFirsNeue-DemiBold.woff) format("woff");
+  }
+}

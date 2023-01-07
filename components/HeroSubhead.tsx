@@ -7,7 +7,7 @@ export const HeroSubhead = () => {
   return (
     <div>
       {" "}
-      <section className="flex w-full text-white align-middle sm:items-center sm:justify-center py-14">
+      <section className="flex w-full text-white sm:items-center sm:justify-center py-14">
         <div className="flex flex-col justify-between sm:w-1/2 sm:flex-row">
           <div className="flex justify-center py-4 align-middle">
             <div className="flex flex-col items-center justify-center p-1 bg-gray-700 rounded-full h-9 w-9">
