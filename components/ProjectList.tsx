@@ -27,7 +27,7 @@ function ProjectList({ projects }: Props) {
                   alt={project.title}
                   fill
                 />
-                <div className="absolute bottom-0 flex justify-between invisible w-full p-5 text-white bg-black bg-opacity-20 rounded-b-2xl">
+                <div className="absolute bottom-0 flex justify-between invisible w-full p-5 text-white bg-black dark:text-black dark:bg-white bg-opacity-20 rounded-b-2xl">
                   <div>
                     <p className="text-lg font-bold">{project.title}</p>
                     <p>

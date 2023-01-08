@@ -16,7 +16,7 @@ export default function BlogSection({ posts }: Props) {
         <h1 className="mb-4 text-3xl font-semibold">Blog Posts</h1>
         <a
           href="/blog"
-          className="h-10 px-4 py-2 text-black bg-white rounded-full hover:bg-gray-200"
+          className="h-10 px-4 py-2 text-black bg-white dark:bg-gray-800 dark:text-white rounded-full dark:hover:dark:bg-gray-800 hover:bg-gray-200"
         >
           Mehr sehen
         </a>

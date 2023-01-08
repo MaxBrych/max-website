@@ -13,7 +13,7 @@ type Props = {
 
 export default function AboutSection({ author }: Props) {
   return (
-    <div className="py-6 border md:px-16 md:py-14 border-y-gray-200 border-x-0">
+    <div className="py-6 border md:px-16 md:py-14 border-y-gray-200 dark:border-y-gray-800 border-x-0">
       {author.map((author) => (
         <section
           className="w-full gap-12 sm:flex align-center "
