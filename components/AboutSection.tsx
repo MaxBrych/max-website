@@ -21,21 +21,22 @@ export default function AboutSection({ author }: Props) {
         >
           <div className="flex-col items-baseline justify-between w-full py-12 md:flex-row">
             {/* IMAGE */}
+
             <Image
-              className="rounded-full h-14"
+              className="rounded-full h-14 mb-3"
               src={urlFor(author.image).url()}
               alt={author.name}
               width={56}
               height={56}
             />
 
-            <h1 className="my-2 text-3xl font-semibold leading-8 ">
+            <h1 className="my-2 text-3xl font-medium leading-8 ">
               Hi, ich bin {author.name}.
             </h1>
             <h6 className="mb-2 text-base font-semibold ">{author.intro}</h6>
             <PortableText value={author.bio} components={RichTextComponents} />
           </div>
-          <div className="flex-col w-full md:mt-6 items-bottom">
+          <div className="flex-col items-bottom justify-end w-full py-12 md:flex-row">
             {/*  <div className="pt-6 pb-4 mb-4 border-b-2 border-gray-800">
               <h5 className="text-2xl text-gray-200">Links</h5>
             </div> */}

@@ -13,7 +13,7 @@ export default function BlogSection({ posts }: Props) {
   return (
     <div className="py-6 md:px-16 md:py-14">
       <div className="flex justify-between">
-        <h1 className="mb-4 text-3xl font-semibold">Blog Posts</h1>
+        <h1 className="mb-4 text-3xl font-medium">Blog Posts</h1>
         <a
           href="/blog"
           className="h-10 px-4 py-2 text-black bg-white dark:bg-gray-800 dark:text-white rounded-full dark:hover:dark:bg-gray-800 hover:bg-gray-200"
@@ -35,7 +35,7 @@ export default function BlogSection({ posts }: Props) {
                 />
                 <div className="absolute bottom-0 flex justify-between invisible w-full p-5 bg-opacity-20 rounded-b-2xl">
                   <div>
-                    <p className="text-lg font-bold">{post.title}</p>
+                    <p className="text-lg font-medium">{post.title}</p>
                     <p>
                       {new Date(post._createdAt).toLocaleDateString("en-US", {
                         day: "numeric",
@@ -47,10 +47,10 @@ export default function BlogSection({ posts }: Props) {
                 </div>
               </div>
               <div className="flex-1 mt-4 ">
-                <h1 className="mb-1 text-xl font-semibold leading-5">
+                <h1 className="mb-1 text-xl font-medium leading-5">
                   {post.title}
                 </h1>
-                <p className="line-clamp-3">{post.description}</p>
+                <p className="line-clamp-3 text-sm mt-2">{post.description}</p>
               </div>
             </div>
           </ClientSideRoute>
