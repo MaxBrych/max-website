@@ -19,7 +19,7 @@ export default function AboutSection({ author }: Props) {
           className="w-full gap-12 sm:flex align-center "
           key={author._id}
         >
-          <div className="flex-col items-baseline justify-between w-full py-12 md:flex-row">
+          <div className="flex-col items-baseline justify-between w-full py-8 md:flex-row">
             {/* IMAGE */}
 
             <Image
@@ -36,7 +36,7 @@ export default function AboutSection({ author }: Props) {
             <h6 className="mb-2 text-base font-semibold ">{author.intro}</h6>
             <PortableText value={author.bio} components={RichTextComponents} />
           </div>
-          <div className="flex-col items-bottom justify-end w-full py-12 md:flex-row">
+          <div className="flex-col items-bottom justify-end w-full py-6 md:py-12 md:flex-row">
             {/*  <div className="pt-6 pb-4 mb-4 border-b-2 border-gray-800">
               <h5 className="text-2xl text-gray-200">Links</h5>
             </div> */}

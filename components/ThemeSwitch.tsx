@@ -27,7 +27,8 @@ const ThemeSwitch = () => {
         <option value="dark">Dark</option>
         <option value="light">Light</option>
       </select>
-
+      {/* ICONS */}
+      {/*
       {currentTheme === "dark" ? (
         <BiMoon
           className="w-5 h-5 text-white"
@@ -39,6 +40,7 @@ const ThemeSwitch = () => {
           onClick={() => setTheme("dark")}
         />
       )}
+      */}
     </>
   );
 };

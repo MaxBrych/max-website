@@ -1,5 +1,5 @@
 import React from "react";
-import { BiCodeAlt, BiPen, BiVolume } from "react-icons/bi";
+import { BiCodeAlt, BiGlobe, BiPen, BiVolume } from "react-icons/bi";
 
 const icon = { color: "black", size: "2rem" };
 
@@ -19,17 +19,18 @@ export const WorkflowSection = () => {
       link: "https://src.com",
     },
     {
-      icon: <BiVolume className="w-6 h-6 text-black dark:text-white mb-3" />,
-      title: "Ship",
-      descr: "Designs veröffentliche ich auf Dribbble und Code auf Github.",
+      icon: <BiGlobe className="w-6 h-6 text-black dark:text-white mb-3" />,
+      title: "Publish",
+      descr:
+        "Designs veröffentliche ich auf meinem Figma Account und Code auf Github.",
       link: "https://src.com",
     },
   ];
   return (
     <div className="py-14 md:px-16 md:py-14">
-      <section className=" space-y-8 md:space-x-8 md:grid md:grid-cols-3 md:pr-4">
+      <section className=" space-y-12 md:space-x-8 md:grid md:grid-cols-3 md:pr-4">
         {data.map((obj) => (
-          <div className="flex flex-col items-start justify-start mb-4 ">
+          <div className=" ">
             {obj.icon}
             <h1 className="text-2xl font-medium mb-2">{obj.title}</h1>
             <p className="text-lg text-gray-300">{obj.descr}</p>
