@@ -11,7 +11,7 @@ type Props = {
 
 export default function BlogSection({ posts }: Props) {
   return (
-    <div className="py-6 md:px-16 md:py-14">
+    <div className="py-8 md:px-16 md:py-14">
       <div className="flex justify-between">
         <h1 className="mb-4 text-3xl font-medium">Blog Posts</h1>
         <a
@@ -21,7 +21,7 @@ export default function BlogSection({ posts }: Props) {
           Mehr sehen
         </a>
       </div>
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-3 gap-y-16">
+      <div className="grid grid-cols-1 md:gap-8 md:grid-cols-3 gap-y-8 md:gap-y-16">
         {/* Posts */}
         {posts.map((post: any) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>

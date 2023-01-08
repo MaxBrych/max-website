@@ -11,7 +11,7 @@ type Props = {
 
 export default function ProjectSection({ projects }: Props) {
   return (
-    <div className="py-6 md:px-16 md:py-14">
+    <div className="py-8 md:px-16 md:py-14">
       <div className="flex justify-between">
         <h1 className="mb-4 text-3xl font-medium">Projekte</h1>
         <a
@@ -21,7 +21,7 @@ export default function ProjectSection({ projects }: Props) {
           Mehr sehen
         </a>
       </div>
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-y-16">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 gap-y-8 md:gap-y-16">
         {/* Posts */}
         {projects.map((project: any) => (
           <ClientSideRoute key={project._id} route={project.link}>
