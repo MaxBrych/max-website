@@ -12,7 +12,7 @@ type Props = {
 export default function ProjectSection({ projects }: Props) {
   return (
     <div className="py-8 md:px-16 md:py-14">
-      <div className="flex justify-between">
+      <div className="flex justify-between py-2">
         <h1 className="mb-4 text-3xl font-medium">Projekte</h1>
         <a
           href="/projects"

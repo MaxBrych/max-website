@@ -26,8 +26,8 @@ export default function AboutSection({ author }: Props) {
               className="rounded-full h-14 mb-3"
               src={urlFor(author.image).url()}
               alt={author.name}
-              width={56}
-              height={56}
+              width={48}
+              height={48}
             />
 
             <h1 className="my-2 text-3xl font-medium leading-8 ">

@@ -30,7 +30,7 @@ export const WorkflowSection = () => {
     <div className="py-14 md:px-16 md:py-14">
       <section className=" space-y-12 md:space-x-8 md:grid md:grid-cols-3 md:pr-4">
         {data.map((obj) => (
-          <div className=" ">
+          <div className="p-6 rounded-lg border border-gray-500">
             {obj.icon}
             <h1 className="text-2xl font-medium mb-2">{obj.title}</h1>
             <p className="text-lg text-gray-300">{obj.descr}</p>
