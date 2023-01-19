@@ -91,7 +91,7 @@ async function Post({ params: { slug } }: Props) {
         </div>
         <div className="absolute invisible left-4 top-20 sm:left-6 sm:top-24 md:visible">
           <Link href="/blog">
-            <MdArrowBackIosNew className="w-12 h-12 p-3 border border-gray-300 rounded-full hover:bg-gray-200" />
+            <MdArrowBackIosNew className="w-12 h-12 p-3 border border-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" />
           </Link>
         </div>
       </div>
