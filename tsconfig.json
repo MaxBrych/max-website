@@ -25,7 +25,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Link.jsx"
+    "components/Link.jsx",
+    "components/HeroSection.tsx"
   ],
   "exclude": ["node_modules"]
 }
